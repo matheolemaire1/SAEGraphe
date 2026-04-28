@@ -5,6 +5,8 @@ public class Objet {
 
     public Objet(String nom){
         this.nomObj = nom;
+    }    
+    public String getObjet(){
+        return this.nomObj;
     }
-    
 }
