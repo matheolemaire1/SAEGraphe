@@ -13,4 +13,7 @@ public class Page{
         this.texte = texte;
         this.enigme = enigme;
     }
+    public int getNum(){
+        return this.numero;
+    }
 }
