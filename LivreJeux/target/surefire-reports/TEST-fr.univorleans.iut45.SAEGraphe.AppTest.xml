@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="FR"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-21-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/iut45/Etudiants/o22503050/Documents/2025/SAE/SAEGraphe/LivreJeux/target/surefire/surefirebooter-20260429115425463_3.jar /home/iut45/Etudiants/o22503050/Documents/2025/SAE/SAEGraphe/LivreJeux/target/surefire 2026-04-29T11-54-25_303-jvmRun1 surefire-20260429115425463_1tmp surefire_0-20260429115425463_2tmp"/>
+    <property name="sun.java.command" value="/home/iut45/Etudiants/o22503050/Documents/2025/SAE/SAEGraphe/LivreJeux/target/surefire/surefirebooter-20260429115714587_3.jar /home/iut45/Etudiants/o22503050/Documents/2025/SAE/SAEGraphe/LivreJeux/target/surefire 2026-04-29T11-57-14_447-jvmRun1 surefire-20260429115714587_1tmp surefire_0-20260429115714587_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/iut45/Etudiants/o22503050/Documents/2025/SAE/SAEGraphe/LivreJeux/target/test-classes:/home/iut45/Etudiants/o22503050/Documents/2025/SAE/SAEGraphe/LivreJeux/target/classes:/home/iut45/Etudiants/o22503050/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.11.0/junit-jupiter-api-5.11.0.jar:/home/iut45/Etudiants/o22503050/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/iut45/Etudiants/o22503050/.m2/repository/org/junit/platform/junit-platform-commons/1.11.0/junit-platform-commons-1.11.0.jar:/home/iut45/Etudiants/o22503050/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/iut45/Etudiants/o22503050/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.11.0/junit-jupiter-params-5.11.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -27,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/home/iut45/Etudiants/o22503050/Documents/2025/SAE/SAEGraphe/LivreJeux/target/surefire/surefirebooter-20260429115425463_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/iut45/Etudiants/o22503050/Documents/2025/SAE/SAEGraphe/LivreJeux/target/surefire/surefirebooter-20260429115714587_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.10+7-Ubuntu-124.04"/>
     <property name="user.name" value="o22503050"/>
@@ -53,5 +53,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testApp" classname="fr.univorleans.iut45.SAEGraphe.AppTest" time="0.0"/>
+  <testcase name="testApp" classname="fr.univorleans.iut45.SAEGraphe.AppTest" time="0.001"/>
 </testsuite>

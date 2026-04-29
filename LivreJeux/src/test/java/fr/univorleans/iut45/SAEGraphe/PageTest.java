@@ -10,4 +10,9 @@ public class PageTest {
         Page a = new Page(1, true, "bonjour", "Que dit un coq pour séduire une poule ?");
         assertEquals(1, a.getNum());
     }
+    @Test
+    public void testgetFin(){
+        Page a = new Page(1, true, "bonjour", "Que dit un coq pour séduire une poule ?");
+        assertEquals(true, a.getFin());
+    }
 }
