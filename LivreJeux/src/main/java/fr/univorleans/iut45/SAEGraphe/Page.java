@@ -22,4 +22,7 @@ public class Page{
     public String getTexte(){
         return this.texte;
     }
+    public String getEnigme(){
+        return this.enigme;
+    }
 }
