@@ -15,4 +15,9 @@ public class PageTest {
         Page a = new Page(1, true, "bonjour", "Que dit un coq pour séduire une poule ?");
         assertEquals(true, a.getFin());
     }
+    @Test
+    public void testgetTexte(){
+        Page a = new Page(1, true, "bonjour", "Que dit un coq pour séduire une poule ?");
+        assertEquals("bonjour", a.getTexte());
+    }
 }
