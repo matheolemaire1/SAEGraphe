@@ -16,4 +16,7 @@ public class Page{
     public int getNum(){
         return this.numero;
     }
+    public boolean getFin(){
+        return this.fin;
+    }
 }
