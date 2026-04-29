@@ -19,4 +19,7 @@ public class Page{
     public boolean getFin(){
         return this.fin;
     }
+    public String getTexte(){
+        return this.texte;
+    }
 }
