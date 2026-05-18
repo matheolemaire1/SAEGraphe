@@ -27,26 +27,28 @@ public class Graphe {
         
     }
 
-    public Page premierePage(){
-
+    public Page premierePage() throws PageNotFoundException{
+        for (Page page:graphe.vertexSet()) {
+            if (page instanceof PageDebut) {
+                return page;
+            }
+        }
+        throw new PageNotFoundException("Aucune première page trouvée ");
     }
 
     public boolean tousObjets(){
         return inventaire.size()>=10;
     }
 
-    public Graph<page> getGraphe(){
+    public Graph<Page,DefaultEdge> getGraphe(){
         return this.graphe;
     }
 
     public void explorePage(Page page){
         page.afficheEnig();
-<<<<<<< HEAD
+
         List<Page> possibilités = this.graphe.getEdges(page);
 
-=======
-        List<Page> possibilités = graphe.getEdges(page);
->>>>>>> f11df6bdeb5cae021a4f5cf24560b14d33b933e0
         String rep = System.console().readLine();
         rep = rep.strip().toLowerCase();
         if (rep.equals("a")) {
@@ -68,12 +70,6 @@ public class Graphe {
             this.affichage.erreur("Veuillez entrer un caractère valide!");
             this.explorePage(page);
         }
-
-
-
-    }
-
-    public void tempsDeParcours() {
 
     }
 
