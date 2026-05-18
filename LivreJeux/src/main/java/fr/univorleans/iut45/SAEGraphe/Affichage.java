@@ -11,8 +11,4 @@ public class Affichage {
         String commande = commande_brute.strip().toLowerCase();
         
     }
-
-    public void (){
-        System.out.println("");
-    }
 }
