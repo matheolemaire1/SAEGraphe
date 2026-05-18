@@ -8,17 +8,20 @@ public class Page{
     private int numero;
     private String enigme;
     private List<String> reponse;
+    private boolean lecture;
 
     public Page(int numero,  String enigme){
         this.numero = numero;
         this.enigme = enigme;
         this.reponse = new ArrayList<>();
+        this.lecture = false;
     }
 
     public Page(int numero,  String enigme,List<String> rep){
         this.numero = numero;
         this.enigme = enigme;
         this.reponse = rep;
+        this.lecture = false;
     }
 
     public void setReponse(String choix){
@@ -33,6 +36,14 @@ public class Page{
         return this.enigme;
     }
 
+    public boolean estLue(){
+        return this.lecture;
+    }
+
+    public void lire(){
+        this.lecture = true;
+    }
+    
     public String afficheEnig(){
         int cpt =0;
         String phr = this.getTexte();
