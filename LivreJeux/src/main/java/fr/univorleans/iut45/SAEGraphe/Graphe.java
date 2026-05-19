@@ -8,6 +8,7 @@ import org.jgrapht.Graphs;
 import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.SimpleGraph;
+import java.util.Random;
 
 public class Graphe {
     
@@ -18,6 +19,7 @@ public class Graphe {
     public Graphe(){
 
         this.graphe = new SimpleGraph<>(DefaultEdge.class);
+        
         this.inventaire = new ArrayList<>();
     }
 
@@ -25,13 +27,28 @@ public class Graphe {
         
     }
 
+    public Page premierePage() throws PageNotFoundException{
+        for (Page page:graphe.vertexSet()) {
+            if (page instanceof PageDebut) {
+                return page;
+            }
+        }
+        throw new PageNotFoundException("Aucune première page trouvée ");
+    }
+
     public boolean tousObjets(){
         return inventaire.size()>=10;
     }
 
+    public Graph<Page,DefaultEdge> getGraphe(){
+        return this.graphe;
+    }
+
     public void explorePage(Page page){
         page.afficheEnig();
-        List<Page> possibilités = graphe.getEdges(page);
+
+        List<Page> possibilités = this.graphe.getEdges(page);
+
         String rep = System.console().readLine();
         rep = rep.strip().toLowerCase();
         if (rep.equals("a")) {
@@ -53,12 +70,6 @@ public class Graphe {
             this.affichage.erreur("Veuillez entrer un caractère valide!");
             this.explorePage(page);
         }
-
-
-
-    }
-
-    public void tempsDeParcours() {
 
     }
 
