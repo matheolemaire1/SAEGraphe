@@ -1,5 +1,6 @@
 package fr.univorleans.iut45.SAEGraphe;
 
+import java.util.List;
 import java.util.Stack;
 
 public class AlgoPronf {
@@ -13,7 +14,8 @@ public class AlgoPronf {
 
      public boolean start(){
         Page prem = gr.premierePage();
-        for(Page p : gr.getGraphe().successorListOf(prem)){
+        List<Page> noeudsuiv = gr.successorListOf(prem);
+        for(Page p : ){
             pile.push(p);}
         
         while(!pile.isEmpty()){
