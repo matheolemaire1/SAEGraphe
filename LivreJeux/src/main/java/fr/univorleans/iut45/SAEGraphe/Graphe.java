@@ -7,7 +7,6 @@ import org.jgrapht.Graph;
 import org.jgrapht.Graphs;
 import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
-import org.jgrapht.graph.SimpleGraph;
 import java.util.Random;
 
 public class Graphe {
@@ -18,7 +17,7 @@ public class Graphe {
 
     public Graphe(){
 
-        this.graphe = new SimpleGraph<>(DefaultEdge.class);
+        this.graphe = new DefaultDirectedGraph<>(DefaultEdge.class);
         
         this.inventaire = new ArrayList<>();
     }
@@ -47,7 +46,7 @@ public class Graphe {
     public void explorePage(Page page){
         page.afficheEnig();
 
-        List<Page> possibilités = this.graphe.getEdges(page);
+        List<Page> possibilités = Graphs.successorListOf(this.graphe,page);
 
         String rep = System.console().readLine();
         rep = rep.strip().toLowerCase();
