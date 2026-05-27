@@ -16,9 +16,6 @@ public class GenerateurGraphe {
 
     private Random choix = new Random();
 
-
-    private Random choix = new Random();
-
     public Graph<Page,DefaultEdge> creation(int ordre,int nbObjets,List<Page> pages){
 
 
@@ -52,7 +49,6 @@ public class GenerateurGraphe {
         }
 
 
-
         randomPage(new ArrayList<>(graphe.vertexSet())).setDeb(); //on met une carte aléatoire en début
 
         Page fin = randomPage(new ArrayList<>(graphe.vertexSet()));
@@ -65,10 +61,10 @@ public class GenerateurGraphe {
                 int tentatives = 0;
                 while ((page.getNbReponses()>graphe.outDegreeOf(page)) && tentatives<100){
                     try {
-                        boolean ajoute = graphe.addEdge(page,randomPageJoinable(new ArrayList<>(graphe.vertexSet())));
+                        
+                        graphe.addEdge(page,randomPageJoinable(new ArrayList<>(graphe.vertexSet())));
 
-                        if (!ajoute) tentatives+=1;
-                        else tentatives = 0;
+                        tentatives ++;
                     } catch (NoJoinablePageException e){
                         System.err.println("Erreur: "+e.getMessage());
                         break;
@@ -86,8 +82,7 @@ public class GenerateurGraphe {
     }
 
     private Graph<Page,DefaultEdge> nuageDePoints(int ordre,List<Page> pages){
-        Graph<Page,DefaultEdge> graphe = new DefaultDirectedGraph<>(DefaultEdge.classDefaultEdge.class);
-
+        Graph<Page,DefaultEdge> graphe = new DefaultDirectedGraph<>(DefaultEdge.class);
         while (graphe.vertexSet().size() < ordre) {
             graphe.addVertex(randomPage(pages));
         }
@@ -145,6 +140,8 @@ public class GenerateurGraphe {
         } else{
             throw new NoJoinablePageException("La liste est vide");
         }
+        throw new NoJoinablePageException("La liste est vide");
+        
     }
 
 
