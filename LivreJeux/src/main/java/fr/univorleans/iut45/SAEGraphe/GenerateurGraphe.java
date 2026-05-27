@@ -51,8 +51,6 @@ public class GenerateurGraphe {
 
         randomPage(new ArrayList<>(graphe.vertexSet())).setDeb(); //on met une carte aléatoire en début
 
-        Page fin = randomPage(new ArrayList<>(graphe.vertexSet()));
-
         if (!fin.getDeb()) fin.setFin();
 
         for (Page page:graphe.vertexSet()) {
@@ -114,35 +112,5 @@ public class GenerateurGraphe {
         throw new NoJoinablePageException("La liste est vide");
         
     }
-
-
-
-
-    private Page randomPage(List<Page> liste) {
-        return liste.get(this.choix.nextInt(liste.size()));
-    }
-
-    private Page randomPageJoinable(List<Page> liste) throws NoJoinablePageException{
-        if (liste.size()>1) {
-            boolean found = false;
-            while (!found) {
-                Page choix = randomPage(liste);
-                if (!choix.getDeb()) {
-                    return choix; 
-                }
-            }
-        } else if (liste.size()==1) {
-            if (!liste.get(0).getDeb()){
-                return liste.get(0);
-            } else{
-                throw new NoJoinablePageException("La liste ne contient qu'un début");
-            }
-        } else{
-            throw new NoJoinablePageException("La liste est vide");
-        }
-        throw new NoJoinablePageException("La liste est vide");
-        
-    }
-
 
 }
